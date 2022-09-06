@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=8, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>get data</h1>
+    <script>
+        getData();
+        async function getData(){
+            const response = await fetch("/api", {method:"GET"});
+            const data = await response.json();
+            console.log(data);
+        }
+    </script>
+</body>
+</html>
